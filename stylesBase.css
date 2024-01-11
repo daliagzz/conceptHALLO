@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Poppins:wght@300&display=swap');
+
+/* Base Styles */
+* {
+    box-sizing: border-box; /*El valor border-box en el box-sizing hace que el padding y el border pasen a formar parte del c�lculo del ancho de la caja y no lo suman posteriormente.*/
+    padding: 0;
+    margin: 0
+}
+body {
+    font-family: "lato", sans-serif;
+    color: white;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+h1 {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0;
+    color: rgb(1, 169, 157);
+    line-height: 1.2;
+}
+
+
+h2 {
+    font-size: 25px;
+    font-weight: 300;
+    margin: 0;
+    color: white;
+    line-height: 1.2;
+}
+p {
+    font-size: 10px;
+}
+img {
+    width: 100%;
+}
+ul {
+    list-style-type: none;
+}
+
+/* Classes */
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    overflow: visible;
+}
+.navbar .container .logo .logo1 {
+    font-family: Arial, Helvetica;
+}
+.navbar .container .logo1 {
+    font-size: 60px;
+}
+.navbar {
+    background-color: rgb(72, 70, 70);
+    height: 200px;
+    padding: 0;
+}
+
+/*.navbar h1 {
+    font-size: 30px;
+    font-weight: 300;
+    margin: 10px 0;
+    line-height: 1.2;
+}*/
+.navbar .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.navbar .container img {
+    padding: 10px;
+    margin: 10px 180px 10px 0;
+}
+.navbar ul {
+        display: flex;
+        margin: 10px, 0, 10px, 50px;
+}
+.navbar a {
+        color: white;
+        padding: 9px;
+        margin: 0 10px;
+ }
+.navbar a:hover {
+        color: rgb(1, 169, 157);
+        /*border-bottom: 3px solid rgb(28, 192, 214);*/
+ }
+ .supporting-text {
+        font-size: 25px;
+ }
+.separador {
+    height: 2px;
+    background-color: white;
+}
+.separador-amapo {
+    height:120px;
+    background-color: rgb(121, 28, 28);
+}
+.separador p {
+    margin-bottom: 30px;
+}
+.showcase {
+    height: 5px;
+    background-color: rgb(142, 141, 144);
+}
+.showcase p {
+        margin-bottom: 30px;
+
+}
+.showcase img {
+        box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.2);
+}
+.showcase-form {
+    padding-left: 7px;
+}
+
+.grid {
+    overflow: visible;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+.grid-item-1,
+.grid-item-2 {
+    position: relative;
+    top: 50px;
+}
+.showcase input[type='email'] {
+    padding: 5px 15px 5px 0;
+    font-size: 12px;
+    border: none;
+    border-radius: 6px;
+    padding-left: 6px;
+}
+.showcase-form {
+    margin: 10px 7px 10px 0;
+}
+/*.showcase-form .btn{
+    background-color: rgb(108, 82, 156);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 14px;
+    margin: 15px;
+    
+}*/
+
+.little-info {
+    font-size: 15px;
+    font-family: "poppins", sans-serif;
+}
+
+.lower-container {
+    margin: 0, auto;
+    padding: 0;
+    max-width: 1000px;
+    text-align: center;
+    background-color: rgb(221, 195, 212);
+}
+
+
+.title {
+    color: black;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.text {
+    color: black;
+    font-size: 19px;
+    width: 100%;
+    padding: 10px;
+    margin: 0, 20px;
+    text-align: justify;
+}
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stats {
+    padding: 0;
+    text-align: center;
+    /*width: 1200px;*/
+    margin: 0;
+}
+
+.stat {
+    margin: 0 30px;
+    text-align: center;
+    width: 800px;
+}
+.stats .fa {
+    color: purple;
+}
+.testimonial {
+    color: black;
+    padding: 40px;
+}
+.testimonial img {
+        height: 100%;
+        clip-path: circle();
+}
+.testimonial h3 {
+    text-align: center;
+}
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.card {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2), 7px 7px 20px rgba(0, 0, 0, 0.2)
+}
+.circle {
+    background-color: transparent;
+    border: 3px solid purple;
+    height: 90px;
+    position: relative;
+    top: -30px;
+    left: 120px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    width: 90px;
+}
+/*p .patita {
+    font-size: 1px;
+}*/
+footer {
+    background-color: rgb(199, 195, 208);
+    padding: 20px 10px;
+}
+footer a {
+    color: white;
+    margin: 0 10px;
+}
+footer a:hover {
+        color: rgb(1, 169, 157);
+        border-bottom: 2px solid rgb(1, 169, 157);
+    }
+#alta {
+    color: rgb(1, 169, 157);
+}
