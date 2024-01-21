@@ -12,21 +12,25 @@
   <title>conceptHALLO</title>
 
 <!--dirección de la hoja de estilos de este html-->
-  <link rel="stylesheet" href="styles Hallos.css">
+  <link rel="stylesheet" href="styles-Hallos.css">
 
 <!-- Palabras clave para encontrar la página...-->
   <meta name="keywords" content="joyería, collares, regalos, bisutería, pulseras, dijes, hecho a mano">
 
 <!--Meta para descripción del contenido de la página-->
-  <meta property="og:description" content="Encuentra el detalle perfecto para tí o esa persona especial">
+  <meta property="og:description" content="Encuentra el detalle perfecto en bisutería para tí o esa persona especial">
 
 <!--link para integrar los iconos de facebook, instagram, twiter y whatsapp en color morado-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
   crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>-->
 
 </head>
 
-<body>
+<body class="carrito-compras-01">
   <div class="contenedor-index">
 <!-- Cabecera y Barra de navegación 
 Estan unidas en un sólo elemento div navbar-->
@@ -40,19 +44,20 @@ Estan unidas en un sólo elemento div navbar-->
               <li class="nav"><a class="outline" href="02Acerca.html">conceptHALLO</a></li>
               <li class="nav"><a class="outline" href="03Galeria.html">galería</a></li>
               <li class="nav"><a class="outline" href="04Contacto.html">contáctanos</a></li>
-              <li class="nav"><a class="outline" href="05Carrito.html">carrito</a></li>
+              <li class="nav"><a class="fas fa-shopping-bag fa-1x" href="05Carrito.html"></a></li>
+              <!--<li class="nav"><a class="outline" href="05Carrito.html">carrito</a></li>-->
               <!--<li class="nav"><a class="outline" href="06Carrito.html">carrito</a></li>-->
             </ul>
           </nav>
       </div>
-    </div><hr class="custom">
+    </div><!--<hr class="custom" style="background-color: white">-->
 
 
 <!-- Area de imagen completa abajo de la cabecera-navbar-->
   <header id="header">
     <section class="amapolas">
-        <div class="container">
-            <img src="./imagenes c-Hallo/amapolas.png" alt="">
+        <div class="container" style="width: 1200px; padding: 0; margin: 0;">
+            <img style="margin: 0; max-width: 100%;" src="./imagenes c-Hallo/amapolas.png" alt="">
         </div>
     </section>
   </header>
@@ -70,7 +75,92 @@ Estan unidas en un sólo elemento div navbar-->
  
       <section id="article2">
         <article class="article">
-            <img src="./imagenes c-Hallo/pulsera.png" alt="">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <!--1. El primer div requiere la utilización de un id (en el ejemplo
+        id=”carouselExampleControls”) para que los controles del carousel funcionen
+        correctamente.
+        La clase .carousel indica que el <div> contiene un carousel.
+        La clase .slide añade una transición CSS en forma de animación, lo que hace que las
+        diapositivas se “deslicen” cuando se pasa de una a otra. Si no deseas este efecto, omite
+        esta clase.
+        El atributo data-bs-ride =”carousel” dice a Bootstrap que empiece a animar el carousel
+        justo cuando se carga la página.
+         -->
+  
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4" class=""></button>
+  
+            </div>
+            <div class="carousel-inner">
+                <!--2. El segundo div con clase .carousel-inner es el que contiene todas las imágenes a
+      mostrar.-->
+                <div class="carousel-item active">
+                    <!--<svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>-->
+                    <img src="./imagenes c-HALLO/producto12-1.png" class="d-block w-100" width="400" height="250" alt="...">
+                    <!--3. Los divs que contienen las imágenes y/o textos, contienen la clase .carousel-item la cual
+            indica que es un contenido de carousel y a alguno de estos, se le debe colocar la clase
+            .active
+          4. Para que el carousel funcione de forma correcta debes colocar la clase .active a una de
+          las diapositivas; de lo contrario, el carousel no será visible. En una página puedes colocar
+          más de un carousel, sin embargo, debes asegurarte de colocar un identificador (id)
+          diferente en cada uno para que los controles funcionen de forma correcta; .-->
+  
+                </div>
+                <div class="carousel-item">
+                    <!--<svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>-->
+                    <img src="./imagenes c-HALLO/producto02-1.png" class="d-block w-100" width="400" height="250" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <!--<svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>-->
+                    <img src="./imagenes c-HALLO/producto03-1.png" class="d-block w-100" width="400" height="250" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <!--<svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Four slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Four slide</text></svg>-->
+                    <img src="./imagenes c-HALLO/producto01-1.png" class="d-block w-100" width="400" height="250" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <!-- recuerda
+                revisar los elementos de control e identificadores, pues deben tener un atributo
+                data-bs-target (o href para enlaces) que coincida con id del elemento carousel-->
+        </div>
+  
+  
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+            
+          <!--     DE AQUI--------------------
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./imagenes c-HALLO/producto12-1.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./imagenes c-HALLO/producto02-1.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./imagenes c-HALLO/producto03-1.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>                     HASTA AQUI-->
+
+
+
+
+
+
+
+            <!--<img src="./imagenes c-Hallo/pulsera.png" alt="">-->
             <!--<a class="outline" <img src="./imagenes c-Hallo/pulsera.png" alt="">></a>
             <embed type="video/mp4" src="./imagenes c-Hallo/heart_-_8449 (540p).mp4" width="400" height="250">-->
         </article>
@@ -80,8 +170,8 @@ Estan unidas en un sólo elemento div navbar-->
       <aside id="sidebar">
 
         <article class="article">
-            <p><h2>Lo que nos apasiona es conjugar en cada pieza el valor de lo único e irrepetible de acuerdo a tus gustos...</h2></p>
-            <p><h2><strong>DGonzález</strong></h2></p>
+            <p><h2>Lo que nos apasiona es conjugar en cada pieza el valor de lo único e irrepetible de acuerdo a tus gustos...</h2>
+            <h2><strong>DGonzález</strong></h2></p>
             <a href="03Galeria.html"><input class="btn" value="Ver GALERÍA &rarr;"></a>
             <!--<input type="submit" class="btn" value="ver GALERÍA" href="03Galeria.html">-->
             <!--<img src="./imagenes c-Hallo/concept.png" alt="">-->
@@ -105,7 +195,7 @@ Estan unidas en un sólo elemento div navbar-->
             <a href="https://twitter.com/DaliaGzz"><i class="fab fa-twitter fa-2x"></i></a>
             <a href="https://www.instagram.com/concept.hallo/"><i class="fab fa-instagram fa-2x"></i></a>
             <a href="https://www.facebook.com/dalia.gonzalez.12327"><i class="fab fa-facebook fa-2x"></i></a>
-            <a href=""><i class="fab fa-whatsapp fa-2x"></i></a>
+            <a href="https://web.whatsapp.com/"><!--<i class="fas fa-shopping-bag fa-2x"></i></a>--><i class="fab fa-whatsapp fa-2x"></i></a>
           </div>
 
     </footer>

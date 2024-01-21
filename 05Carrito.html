@@ -10,21 +10,23 @@
   <title>conceptHALLO</title>
 
 <!--dirección de la hoja de estilos de este html-->
-  <link rel="stylesheet" href="styles Hallos.css">
+  <link rel="stylesheet" href="styles-Hallos.css">
 
 <!-- Palabras clave para encontrar la página...-->
   <meta name="keywords" content="joyería, collares, regalos, bisutería, pulseras, dijes, hecho a mano">
 
 <!--Meta para descripción del contenido de la página-->
-  <meta property="og:description" content="Encuentra el detalle perfecto para tí o esa persona especial">
+  <meta property="og:description" content="Encuentra el detalle perfecto en bisutería para tí o esa persona especial">
 
 <!--link para integrar los iconos de facebook, instagram, twiter y whatsapp en color morado-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
   crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- PRUEBA DEL CHATGPT DEL CARRITO DE COMPRAS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 </head>
 
-<body>
+<body class="carrito-compras-05">
 <!-- Cabecera y Barra de navegación 
 Estan unidas en un sólo elemento div navbar-->
   <div id="contenedor-05Carrito">
@@ -37,26 +39,85 @@ Estan unidas en un sólo elemento div navbar-->
               <li class="nav"><a class="outline" href="02Acerca.html">conceptHALLO</a></li>
               <li class="nav"><a class="outline" href="03Galeria.html">galería</a></li>
               <li class="nav"><a class="outline" href="04Contacto.html">contáctanos</a></li>
-              <li class="nav"><a class="outline" href="05Carrito.html">carrito</a></li>
+              <li class="nav"><a class="fas fa-shopping-bag fa-1x" href="05Carrito.html"></a></li>
+              <!--<li class="nav"><a class="outline" href="05Carrito.html">carrito</a></li>-->
             </ul>
           </nav>
       </div>
-    </div><hr class="custom">
+    </div><!--<hr class="custom">-->
+
+
+    <!--PRUEBA DEL CARRITO DE COMPRAS DEL CHATGPT-->
+    <!-- Contenido principal -->
+<div class="container mt-4">
+  <div class="row">
+    <!-- Contenido principal va aquí -->
+
+    <!-- Carrito de Compras -->
+    <div class="col-md-8">
+      <h2>Carrito de Compras</h2>
+      <ul class="list-group">
+        <!-- Lista de productos en el carrito -->
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Producto 1
+          <span class="badge badge-primary badge-pill">1</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Producto 2
+          <span class="badge badge-primary badge-pill">2</span>
+        </li>
+        <!-- Agrega más elementos según sea necesario -->
+      </ul>
+    </div>
+
+    <!-- Resumen del Carrito -->
+    <div class="col-md-4">
+      <h2>Resumen</h2>
+      <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Subtotal
+          <span class="badge badge-primary badge-pill">$295.00</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Envío
+          <span class="badge badge-primary badge-pill">$75.00</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Total
+          <span class="badge badge-primary badge-pill">$370.00</span>
+        </li>
+      </ul>
+      <button type="button" class="btn btn-success btn-block mt-3">Realizar Pago</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+<!--TERMINA PRUEBA DE CARRITO CHATGPT-->
+
+
+
+
 
     <!-- Area Para insertar un VIDEO------------------- 
     -------------------------------------------------
     --------------------------------------------
     ----------------------------------------->
   
-      <section class="cabeza-galeria">
+      <!--<section class="cabeza-galeria">
         <h2>CARRITO DE COMPRAS</h2>
       </section>
       
-    <section class="video">
+    <section class="video">-->
   <!--/*<h2>Carrito de Compras</h2><br><br>-->
-      <h2>Video de ejercicio del curso:</h2>
+      <!--<h2>Video de ejercicio del curso:</h2>
 
-      <embed type="video/mp4" src="./imagenes c-Hallo/valentine.mp4" width="600" height="350">
+      <embed type="video/mp4" src="./imagenes c-Hallo/valentine.mp4" width="600" height="350">-->
 
       <!--<embed type="video/mp4" src="./imagenes c-Hallo/video-prueba.mp4" width="600" height="350">-->
 
@@ -68,7 +129,7 @@ Estan unidas en un sólo elemento div navbar-->
           <button class="video-pause">Pause</button>
           <span class="video-time"></span>
         </div>-->
-    </section>
+    <!--</section>-->
 
 
     <!-- Voy a dividir en 2 el espacio del centro; section y aside; section lo voy a manejar con grid para pponer varias imágenes y en aside el texto
@@ -145,7 +206,7 @@ Estan unidas en un sólo elemento div navbar-->
             <a href="https://twitter.com/DaliaGzz"><i class="fab fa-twitter fa-2x"></i></a>
             <a href="https://www.instagram.com/concept.hallo/"><i class="fab fa-instagram fa-2x"></i></a>
             <a href="https://www.facebook.com/dalia.gonzalez.12327"><i class="fab fa-facebook fa-2x"></i></a>
-            <a href=""><i class="fab fa-whatsapp fa-2x"></i></a>
+            <a href="https://web.whatsapp.com/"><i class="fab fa-whatsapp fa-2x"></i></a>
           </div>
 
     </footer>

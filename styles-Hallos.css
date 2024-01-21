@@ -44,6 +44,20 @@ body {
     margin: 1em auto;
     /*border: 1px solid blue;*/
 }
+.carrito-compras-05 {
+  background-color: rgb(198, 202, 200);
+    font-family: "lato", sans-serif;
+    color: black;
+    width: 1200px;
+    margin: 1em auto;
+}
+.carrito-compras-01 {
+  background-color: rgb(72, 70, 70);
+    font-family: "lato", sans-serif;
+    color: white;
+    width: 1200px;
+    margin: 1em auto;
+}
 /*.content {
     border: 2px solid white;
 }*/
@@ -69,17 +83,20 @@ li {
     display: auto;
 }*/
 /* línea de separación entre 2 secciones o partes o divs o x.   Juegas con el grosor de la linea, el color y el margen para generar la separacion de elementos... */
-hr.custom {
-    height: .5em; /* Grosor de la línea */
-    background-color: white; /* Color de la línea */
-    border: none; /* Elimina el borde por defecto */
+/*hr.custom {
+    height: .5em; *//* Grosor de la línea */
+    /*background-color: white; *//* Color de la línea */
+    /*border: none; *//* Elimina el borde por defecto */
     /*margin: .2em; Margen superior e inferior para separar del contenido; pero afecta el lado derecho e izq de la linea blanca que puse*/
-    margin-bottom: .2em;
-}
+    /*margin-bottom: .2em;
+    color: white;
+}*/
 
 /* Instruccion que afecta el boton de pag ppal que lleva a GALERIA*/
-.article .btn {
+.article .btn,
+.Acerca-de .btn {
     color: rgb(1, 169, 157);
+    background-color: white;
     padding: .5em 1.1em;
     border: .1em;
     border-color: rgb(1, 169, 157);
@@ -89,11 +106,15 @@ hr.custom {
 }
 .navbar {
     width: 100%;
-    padding: .5em, 1.5em;
-    margin: 0px auto;
+    /*padding: .5em, 1.5em;
+    margin: 0px auto;*/
+    margin: 0 0 8px 0;
+    border-bottom: 8px solid white;
     height: 10em;
-    padding: 0;
+    padding: 10px;
+    /*padding: 0;*/
     background-color: rgb(72, 70, 70);
+    /*text-decoration: none;*/
 }
 .navbar .container img {
     width: 30%;
@@ -106,9 +127,12 @@ hr.custom {
     justify-content: space-around;
     color: white;
     border-bottom: none;
+    /*text-decoration: none;*/
+    /*font-family: "lato", sans-serif;*/
 }
 .navbar a {
     color: white;
+    text-decoration: none;
 }
 .navbar a:hover {
     color: rgb(1, 169, 157);
@@ -158,15 +182,35 @@ footer.grid-container-contacto {
   align-items: center;
   padding: .5em;
 }
-.article .btn a:hover {
+.article .btn a:hover,
+.Acerca-de .btn a:hover {
   color: rgb(1, 169, 157);
 }
+
+
+
+/*-----------------------------------------XXXXXXXXXInstrucción para que al pasar por el boton de "ir a Galería" cambie a blanco; porque en automático pasa a azul sin fondo y no se ve  --es un arreglo mínimo porque no sé como cambiarlo-- jajajajaja  XXXXXXXXXXXXXXX*/
+.article a:hover {
+color: white;
+}
+
+/*________________________________XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+
+
+
+
 /*Separamos los iconos de redes sociales entre ellos utilizando padding*/
-.profiles a{
-  padding: 0em .5em 0em .5em;
+.contacto-texto .profiles-contacto {
+  margin: 8vw 0 13vw 0;
+}
+.profiles a,
+.contacto-texto .profiles-contacto a {
+  padding: 2vw 1em 2vw 1em;
   color: rgb(1, 169, 157);
 }
-.profiles a:hover {
+.profiles a:hover,
+.contacto-texto .profiles-contacto a:hover{
   color: white;
 }
 .clearfix {
@@ -179,7 +223,7 @@ footer.grid-container-contacto {
 
 
 
-/* Instrucciones para tratar de reconfigurar toda la pagina de Inicio para hacer un grid---------------- -------------------------------------------------------- --------------------------------------------------------- ----------------------------------------------*/
+/* Instrucciones para tratar de reconfigurar toda la pagina de INICIO para hacer un grid---------------- -------------------------------------------------------- --------------------------------------------------------- ----------------------------------------------*/
 
 
   /*display: grid;
@@ -205,16 +249,19 @@ footer.grid-container-contacto {
   grid-column-start: 1 4;
 }*/
 section#article1 .article img {
-  max-height: 250px;
+  /*max-height: 250px;*/
+  max-width: 423px;
   width: auto;
   grid-column-start: 1 2;
 }
 section#article2 .article img {
-  max-height: 250px;
+  /*max-height: 250px;*/
+  max-width: 423px;
   width: auto;
   grid-column-start: 2 3;
 }
 aside#sidebar .article {
+  max-width: 378px;
   max-height: 250px;
   grid-column-start: 3 4;
   
@@ -265,8 +312,7 @@ img .chica {
 
 
 /* del apapagina de PRUBA de css------------------------------------------- -------------*/
-body .exposicion,
-footer .grid-container {
+/*body .exposicion {
   display: grid;
   grid-template-columns: repeat(5, 230px);
   grid-auto-rows: minmax(4, auto);
@@ -385,14 +431,189 @@ aside p {
   height: 100%;
   width: 230px;
 }
+*/
+/*Instrucc para que no se ponga NADA del lado derecho o izq del elemento clase=exposicion, porque yo le puse clase= .clearfix; y el maestro lo llama .clear*/
+/*.exposicion .clearfix {
+  clear: both;
+}*/
+
+
+
+
+
+/* Instrucciones para nuevoa pagina de grid de 02ACERC-----del día 17 ene
+---------------------------------------------------------------*/
+
+
+
+body .exposicion {
+  max-width: /*780px*/840px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  /*grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));*/
+  /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
+  /*grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(3, auto);*/
+  float: left;
+  overflow: visible;
+  position: top;
+  grid-gap: .5em;
+  justify-content: space-between/*space-around;*/;
+}
+/*.exposicion {
+  max-width: 1200px;
+  margin: 0 auto;
+}*/
+.aside-Acerca-de {
+  max-width: 350px/*420px*/;
+  float: left;
+  /*padding: 1em;*/
+  margin: 0 0 0 2em; 
+
+}
+aside p {
+  font-size: .9em;
+  padding: 5px;
+}
+
+.exposicion #foto01 {
+  /*grid-column: 1 / 3;
+  grid-row: 1;*/
+  grid-column: span 2;
+  /*max-height: 156px;*/
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.exposicion #foto02 {
+  /*grid-column: 3 / 5;
+  grid-row: 1;*/
+  grid-column: span 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.exposicion #concept-hallo {
+  /*    grid-column: 1;    */
+  /*grid-row: 2;*/
+  grid-column:1;
+  grid-row: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.exposicion #foto05 {
+  /*grid-column: 2;
+  grid-row: 2 / 3;*/
+  /*      grid-column: 1;     */
+  grid-column: 2;
+  grid-row: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.exposicion #foto06 {
+  grid-column: span 2/*3 / 5*/;
+  grid-row: 2;
+  /*grid-row: 2;*/
+  /*grid-row: 2 / 3;*/
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  
+ 
+
+
+ 
+  
+/*#foto04 {
+  grid-column: 1;
+  grid-row: 3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}*/
+  
+  
+
+
+.exposicion #foto07 {
+  grid-column: 1;
+  grid-row: 3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.exposicion #foto08 {
+  grid-column: 2;
+  grid-row: 3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.exposicion #foto09 {
+  grid-column: 3;
+  grid-row: 3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.exposicion #foto10 {
+  max-height: 100%;
+  max-width: 100%;
+  grid-column: 4;
+  grid-row: 3;
+  /*grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;*/
+}
+/*.aside-Acerca-de {
+  max-width: 250px;
+  grid-column: 5;
+  grid-row: 1 / 5;
+  object-fit: cover;
+}*/
+.Acerca-de .strong {
+  font-size: 30px;
+  color: rgb(1, 169, 157);
+}
+.foto-gde img {
+  height: auto/*186px*/;
+  width: /*auto345px*/390px;
+}
+
+.foto-chica img {
+  height: auto;
+  width: 187px;
+}
 
 /*Instrucc para que no se ponga NADA del lado derecho o izq del elemento clase=exposicion, porque yo le puse clase= .clearfix; y el maestro lo llama .clear*/
-.exposicion .clearfix {
+.grid-de-02Acerca .clearfix {
   clear: both;
 }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TERMINAN Instrucciones para nuevoa pagina de grid de 02ACERC-----del día 17 ene
+---------------------------------------------------------------*/
 
 
 
@@ -424,9 +645,10 @@ aside p {
 /*esta instruccion afecta la pag 03Galeria--------------------*/
 .contenedor-03Galeria .grid-container-03 {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    /*grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);*/
+    /*grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));*/
+    grid-template-columns: auto auto auto auto;
+    /*grid-template-columns: repeat(4, 1fr);*/
+    /*grid-template-rows: repeat(2, 1fr);*/
     gap: .8em;
     justify-content: space-around;
     /*align-items: center;*/
@@ -444,7 +666,7 @@ aside p {
 .contenedor-03Galeria .botoncito {
   display: flex;
   width: 100%;
-  margin: 20px 20px;
+  margin: 20px 0px;
   justify-content: center;
   align-content: center;
   color: rgb(1, 169, 157);
@@ -473,7 +695,46 @@ aside p {
 .producto-descipcion button:hover, 
 .card-body #carrito:hover {
   background-color: rgb(1, 169, 157);
+  
 }
+.card {
+  
+
+  
+}
+.card .card-body {
+  /*justify-content: center;*/
+  background-color: rgb(72, 70, 70);
+  color: white;
+  font-family: "lato", sans-serif;
+  padding: 0;
+  text-align: center;
+}
+.card-title {
+  font-size: 25px;
+  padding: 1vw 0 0 0;
+}
+.card-text {
+  margin: 0 1vw 0 1vw;
+  font-size: 10px;
+}
+
+
+
+
+/*categorias del proyecto termando de muebles del maestro INSTRUCCIONES para hacer as grande la imagen cuando pasas por encima el cursor ..estamos en lso css de 03Galeria------------------------------
+*/
+.card-img-top /*img-grow */{
+  transition: transform 0.3s; /* Añade una transición suave */
+  cursor: pointer;
+}
+
+.card-img-top/*img-grow*/:hover {
+  transform: scale(1.2); /* Escala la imagen al 120% */
+}
+
+/* HASTA AQUI --ategorias del proyecto termando de muebles del maestro*/
+
 
 
 
@@ -500,7 +761,41 @@ aside p {
     justify-content: center;
     align-items: center;
 }*/
-/*Para 04Contacto*/
+
+
+
+
+
+/*Para 04Contacto------------------------------------------------- --------------------------------------------------------------------- -------------------------------------------------------------------------- ------------------------------------------------------------------------- ------------------------------------------------------------------------*/
+
+
+/*Ejemplo de w3school para que sea responsive de media query en 04Contacto*/
+/*Container for flexboxes ------CAMBIO DE "br" por padding o margin*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /*text-align: center;*/
+}
+
+ /*Create four equal columns */
+.column {
+  flex: 25%;
+  padding: 20px;
+ 
+}
+.contacto-texto h2 {
+  margin: 5vw 0 0 0;
+}
+
+
+
+/*AQUI TERMINA lo del ejemplo de w3scholl para que sea responsive con media query*/
+
+
+
+
+
 .izquierda,
 .derecha,
 .botones {
@@ -510,7 +805,7 @@ aside p {
 #Formulario-Contenedor {
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     /*background-color: white;*/
 }
@@ -622,17 +917,19 @@ aside p {
   input#codigopostal {
     width: 202px;
     border-radius: 3px;
-    margin-top: 10px
+    margin-top: 3px;
+    margin-bottom: 8px;
   }
   select#pais {
     width: 262px;
     border-radius: 3px;
-    margin-top: 10px
+    margin-top: 3px;
+    margin-bottom: 8px;
   }
   input#email {
     width: 249px;
     border-radius: 3px;
-    margin-top: 10px
+    margin-top: 3px;
   }
   
 
@@ -724,8 +1021,19 @@ aside p {
     border-radius: .5em;
     margin: .25em;
     background-color: rgb(179, 177, 177);
+    width: 400px;
   }
+  .formulario-texto ul {
+    margin: 0 0 0 5vw;
+  }
+.formulario-contenedor {
+  width: 400px;
+}
 
+/*Insrucción para dar márgen dentro de 04CONTACTO a la parte "nueva" del formularo que saqué de bootstraps*/
+.row .mb-3 {
+  margin: 0 20px 10px 90px;
+}
 
 
 
@@ -775,7 +1083,290 @@ aside p {
   /* 05 Carrito de compras---------------------------- pero vamos a poner
   un video para el ejercicio de la clase Front Fundamentals*/
 
-.video {
+/*.video {
     display: flex;
     justify-content: space-around;
+}*/
+
+
+/*PRUEBA DEL CHAT GPT DE CARRITO DE COMPRAS, para dejar un margen entre el bloque del carrito y el pie de página*/
+
+
+
+.row {
+  margin: 0 0 2vw 0;
+}
+
+/*PRUEBA DE CAMBIO DE  FONT para el CARRITO DE COMRAS QUE ME TRAJE DEL CHPT*/
+/*.navbar .container */ul {
+  /*display: flex;
+  padding: .5em;*/
+  margin: .5em 0 .5em 5em;
+  list-style-type: none;/*
+  justify-content: space-around;
+  color: white;*/
+  border-bottom: none;
+  font-family: "lato", sans-serif;
+}
+.grid-container h3,
+.grid-container p {
+  font-family: "lato", sans-serif;
+  color: white;
+  align-content: center;
+}
+.grid-container h3{
+  font-size: 25px;
+}
+
+.contenedor-index-interno p,
+.contenedor-index-interno h2 {
+font-size: 1.2em;
+}
+
+
+
+
+
+
+
+
+/*CSS para los botones de cambio de pagina en 03Galeria*/
+
+.paginas1-2-3 {
+  margin: 45px 0 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.paginas1-2-3 a.btn-primary {
+background-color: rgb(142, 141, 144);
+text-decoration: none;
+color: white;
+padding: 5px 10px;
+margin: 10px 5px;
+border-color: rgb(142, 141, 144);
+}
+.paginas1-2-3 a:hover {
+  background-color: rgb(1, 169, 157);
+  cursor: pointer;
+}
+
+
+/*para VIDEO de la última página*/
+
+.video {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 30px;
+}
+
+
+
+
+
+
+
+
+/* Prueba de responsive
+*/
+@media screen and (max-width: 960px/*600px*/) {
+body {
+  max-width: 100vw/*600px*/;
+  /*background-color: lightgreen;*/
+}
+.contenedor-index,
+.contenedor-index-interno {
+  flex-direction: column;
+  grid-template-columns: 1fr;
+  max-width: 100vw/*600px*/;
+  justify-items: center;
+  margin: 0/*10px*/;
+  /*flex-direction: column;*/
+  /*align-items: center;*/
+  /*transform: scale(0.5);*/
+}
+/*.contenedor-index-interno p,
+.contenedor-index-interno h2 {
+font-size: .55em;
+}*/
+
+
+.amapolas {
+  max-width: 100vw/*600px*/;
+  /*margin: 4px 10px 4px 10px;*/
+}
+footer.grid-container{
+grid-template-columns: 1fr;
+/*justify-content: left;*/
+max-width: 100vw/*600px*/;
+padding: 3px;
+gap: 2vw;
+/*margin:10px;*/
+}
+
+.navbar .container {
+flex-direction: column;
+max-width: 100vw/*auto*/;
+font-size: 2.5vw;
+justify-items: space-around;
+align-items: center;
+/*margin: 10px;*/
+}
+.container img {
+padding: 1vw;
+min-width: 360px;
+}
+
+
+/*Para desplegar lo de 02Acerca de*/
+
+/*.grid-de-02Acerca {
+justify-items: auto;
+align-items: center;
+}*/
+.exposicion {
+grid-template-columns: auto auto;
+justify-items: auto;
+align-items: center;
+margin: 0 0 0 10px;
+/*grid-template-rows: repeat(auto-fill, 1fr);*/
+}
+
+body .exposicion #foto01 {
+  grid-column: 1 / -1;
+}
+body .exposicion #foto02 {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+.exposicion #concept-hallo {
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
+.exposicion #foto05 {
+  grid-column: 2 / -1;
+  grid-row: 3;
+}
+.exposicion #foto06 {
+  grid-column: 1 / -1;
+  grid-row: 4;
+}
+.exposicion #foto07 {
+  grid-column: 1 / -1;
+  grid-row: 5;
+}
+.exposicion #foto08 {
+  grid-column: 2 / -1;
+  grid-row: 5;
+}
+.exposicion #foto09 {
+  grid-column: 1 / -1;
+  grid-row: 6;
+}
+.exposicion #foto10 {
+  grid-column: 2 / -1;
+  grid-row: 6;
+}
+
+/* Para que se despliegue correctamente y centrado el index de 03Galeria copy.html ---
+-------------------------del  @media query   -----------------------------------------
+---------------------------------------------------------------------*/
+
+
+.grid-container-03 {
+  justify-items: center;
+}
+.contenedor-03Galeria .grid-container-03 {
+ 
+  grid-template-columns: auto auto;
+  /*grid-template-columns: repeat(4, 1fr);*/
+  /*grid-template-rows: repeat(2, 1fr);*/
+  justify-content: space-around;
+  /*align-items: center;*/
+}
+
+.grid-container-03 .card img {
+  margin: 10vw 0 0 0;
+}
+
+/*.card .card-body {
+  justify-content: center;
+  text-align: center;
+}*/
+.productos {
+  margin: 7px 0 0 0;
+}
+/*
+section .botoncito {
+  justify-content: center;
+  margin: 0;
+}*/
+
+/* Para que se despliegue correctamente y centrado el index de 03Galeria copy.html ---
+-----------------------------------------------------------------------------------
+------------------------------ACABA AQUI---------------------------------------*/
+
+
+/*.grid-de-02Acerca .exposicion {
+  /*grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  max-width: auto;
+  justify-items: center;
+  margin: 1vw;
+}*/
+
+
+/*
+.foto1{
+  max-width: 100%;
+}
+.foto1 img{
+  border-radius: 5px 5px 0px 0px;
+}
+.contenedor1 .texto1{
+  border-radius: 0px 0px 5px 5px;
+}
+*/
+/*Ejemplo de w3school para que sea responsive de media query en 04Contacto*/
+/* Container for flexboxes */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create four equal columns */
+.column {
+  flex: 25%;
+  padding: 20px;
+}
+.contacto-texto h2 {
+  margin: 5vw 0 0 0;
+}
+
+/*categorias*/
+.card img .card-img-top /*img-grow */{
+  transition: transform 0.3s; /* Añade una transición suave */
+}
+
+.card img .card-img-top/*img-grow*/:hover {
+  transform: scale(1.2); /* Escala la imagen al 120% */
+}
+
+
+
+
+}
+@media screen and (max-width: 600px) {
+  .contenedor-03Galeria .grid-container-03 {
+    grid-template-columns: auto;
+    /*grid-template-columns: repeat(4, 1fr);*/
+    /*grid-template-rows: repeat(2, 1fr);*/
+    justify-content: space-around;
+    /*align-items: center;*/
+  }
+  
+
 }
